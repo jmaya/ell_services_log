@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date of service:</b>
+  <%= @entry.date_of_service %>
+</p>
+
+<p>
+  <b>Duration of service:</b>
+  <%= @entry.duration_of_service %>
+</p>
+
+<p>
+  <b>Group size:</b>
+  <%= @entry.group_size %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

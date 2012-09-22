@@ -1,0 +1,39 @@
+<%= simple_form_for(@entry) do |f| %>
+  <% if @entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+      <% @entry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_of_service %><br />
+    <%= f.text_field :date_of_service, :class => 'datepicker' %>
+  </div>
+  <div class="field">
+    <%= f.label :duration_of_service %><br />
+    <%= f.number_field :duration_of_service, :hint => "In Minutes" %> In Minutes
+  </div>
+  <div class="field">
+    <%# <%= f.label :group_size %><br />
+    <%= f.input :group_size, :collection => ["1-5", "5-10", "5-15", "15-20", "20-40"] %>
+  </div>
+  <h3>
+    Areas Covered/Facilitated
+  </h3>
+  <% Category.all.each do |category| %>
+    <h4><%=category.name %> </h4>
+    <% category.tasks.each do |task| %>
+      <%= check_box_tag "entry[task_ids][]", task.id %><%=task.name %></br>
+    <% end %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

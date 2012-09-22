@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_of_service: 2012-09-22
+  duration_of_service: 1
+  group_size: MyString
+
+two:
+  date_of_service: 2012-09-22
+  duration_of_service: 1
+  group_size: MyString
