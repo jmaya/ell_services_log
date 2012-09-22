@@ -1,0 +1,177 @@
+---
+- !ruby/object:Task
+  attributes:
+    id: 1
+    name: Small group instruction in classroom
+    created_at: 2012-09-22 14:42:56.861295000 Z
+    updated_at: 2012-09-22 16:03:51.615044000 Z
+    category_id: 1
+- !ruby/object:Task
+  attributes:
+    id: 2
+    name: Small group instruction out of classroom
+    created_at: 2012-09-22 14:48:42.656309000 Z
+    updated_at: 2012-09-22 14:48:42.656309000 Z
+    category_id: 1
+- !ruby/object:Task
+  attributes:
+    id: 3
+    name: Assist in modifying assignments, tests/quizzes
+    created_at: 2012-09-22 14:49:31.486890000 Z
+    updated_at: 2012-09-22 14:49:31.486890000 Z
+    category_id: 1
+- !ruby/object:Task
+  attributes:
+    id: 4
+    name: Individualized instruction in/out of classroom
+    created_at: 2012-09-22 14:50:08.496549000 Z
+    updated_at: 2012-09-22 15:23:22.918142000 Z
+    category_id: 1
+- !ruby/object:Task
+  attributes:
+    id: 5
+    name: Modeling of ESOL techniques or ESOL Matrix Strategies
+    created_at: 2012-09-22 14:50:35.021796000 Z
+    updated_at: 2012-09-22 14:50:35.021796000 Z
+    category_id: 1
+- !ruby/object:Task
+  attributes:
+    id: 6
+    name: Provide in-class support with test/quiz
+    created_at: 2012-09-22 14:50:49.727140000 Z
+    updated_at: 2012-09-22 15:23:22.919916000 Z
+    category_id: 1
+- !ruby/object:Task
+  attributes:
+    id: 7
+    name: Provide out-of-class support with test/quiz
+    created_at: 2012-09-22 14:51:11.167560000 Z
+    updated_at: 2012-09-22 15:23:22.919037000 Z
+    category_id: 1
+- !ruby/object:Task
+  attributes:
+    id: 8
+    name: Translation of classwork directions, background knowledge or content
+    created_at: 2012-09-22 14:51:37.964816000 Z
+    updated_at: 2012-09-22 14:51:37.964816000 Z
+    category_id: 1
+- !ruby/object:Task
+  attributes:
+    id: 9
+    name: Translation of Quiz/Test directions, background knowledge or content
+    created_at: 2012-09-22 14:51:53.815980000 Z
+    updated_at: 2012-09-22 14:51:53.815980000 Z
+    category_id: 1
+- !ruby/object:Task
+  attributes:
+    id: 10
+    name: Provide other curriculum support
+    created_at: 2012-09-22 16:35:34.939157000 Z
+    updated_at: 2012-09-22 16:35:34.939157000 Z
+    category_id: 1
+- !ruby/object:Task
+  attributes:
+    id: 11
+    name: Consult academic-planning support with content teacher
+    created_at: 2012-09-22 16:37:06.874629000 Z
+    updated_at: 2012-09-22 16:37:06.874629000 Z
+    category_id: 3
+- !ruby/object:Task
+  attributes:
+    id: 12
+    name: Consult with Content Teacher Behavior culture-related difficulties
+    created_at: 2012-09-22 16:38:16.702126000 Z
+    updated_at: 2012-09-22 16:38:52.382524000 Z
+    category_id: 3
+- !ruby/object:Task
+  attributes:
+    id: 13
+    name: Consult with service providers
+    created_at: 2012-09-22 16:39:25.434165000 Z
+    updated_at: 2012-09-22 16:39:25.434165000 Z
+    category_id: 3
+- !ruby/object:Task
+  attributes:
+    id: 14
+    name: Data Chat/Progress Monitoring Meetings Students
+    created_at: 2012-09-22 16:40:41.098083000 Z
+    updated_at: 2012-09-22 16:40:41.098083000 Z
+    category_id: 3
+- !ruby/object:Task
+  attributes:
+    id: 15
+    name: Data Chat/Progress Monitoring Meetings Teachers
+    created_at: 2012-09-22 16:40:50.647658000 Z
+    updated_at: 2012-09-22 16:40:50.647658000 Z
+    category_id: 3
+- !ruby/object:Task
+  attributes:
+    id: 16
+    name: Phone Contact
+    created_at: 2012-09-22 16:42:03.713891000 Z
+    updated_at: 2012-09-22 16:42:03.713891000 Z
+    category_id: 4
+- !ruby/object:Task
+  attributes:
+    id: 17
+    name: Conference/parent/teachers/student
+    created_at: 2012-09-22 16:42:19.286745000 Z
+    updated_at: 2012-09-22 16:42:19.286745000 Z
+    category_id: 4
+- !ruby/object:Task
+  attributes:
+    id: 18
+    name: Consult/Colaborated with other personnel
+    created_at: 2012-09-22 16:43:04.028859000 Z
+    updated_at: 2012-09-22 16:43:04.028859000 Z
+    category_id: 3
+- !ruby/object:Task
+  attributes:
+    id: 19
+    name: Use of Electronic devices
+    created_at: 2012-09-22 16:43:53.842436000 Z
+    updated_at: 2012-09-22 16:43:53.842436000 Z
+    category_id: 5
+- !ruby/object:Task
+  attributes:
+    id: 20
+    name: ! 'Published or electronic bilingual dictionary (a synonym dictionary, without          definitions,
+      in the student’s native language) '
+    created_at: 2012-09-22 16:44:13.260776000 Z
+    updated_at: 2012-09-22 16:44:13.260776000 Z
+    category_id: 5
+- !ruby/object:Task
+  attributes:
+    id: 21
+    name: Translated or simplified instruments such as rubrics or printed notes
+    created_at: 2012-09-22 16:44:33.725614000 Z
+    updated_at: 2012-09-22 16:44:33.725614000 Z
+    category_id: 5
+- !ruby/object:Task
+  attributes:
+    id: 22
+    name: Homework
+    created_at: 2012-09-22 16:46:27.915332000 Z
+    updated_at: 2012-09-22 16:46:27.915332000 Z
+    category_id: 6
+- !ruby/object:Task
+  attributes:
+    id: 23
+    name: Tests
+    created_at: 2012-09-22 16:46:39.702341000 Z
+    updated_at: 2012-09-22 16:46:39.702341000 Z
+    category_id: 6
+- !ruby/object:Task
+  attributes:
+    id: 24
+    name: Classwork
+    created_at: 2012-09-22 16:46:47.109430000 Z
+    updated_at: 2012-09-22 16:46:47.109430000 Z
+    category_id: 6
+- !ruby/object:Task
+  attributes:
+    id: 25
+    name: Language Assesment
+    created_at: 2012-09-22 16:47:24.869189000 Z
+    updated_at: 2012-09-22 16:49:11.944530000 Z
+    category_id: 7
