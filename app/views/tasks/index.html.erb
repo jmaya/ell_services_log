@@ -11,8 +11,8 @@
 
 <% @tasks.each do |task| %>
   <tr>
-    <td><%= task.name %></td>
-    <td><%= task.category.try.name %></td>
+    <td><%= task.try(:name) %></td>
+    <td><%= task.category.try(:name)%></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>

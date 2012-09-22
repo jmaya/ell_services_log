@@ -135,8 +135,7 @@
 - !ruby/object:Task
   attributes:
     id: 20
-    name: ! 'Published or electronic bilingual dictionary (a synonym dictionary, without          definitions,
-      in the student’s native language) '
+    name: Published or electronic bilingual dictionary (a synonym dictionary, without definitions, in the students native language)
     created_at: 2012-09-22 16:44:13.260776000 Z
     updated_at: 2012-09-22 16:44:13.260776000 Z
     category_id: 5
