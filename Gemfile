@@ -12,3 +12,9 @@ gem "will_paginate", ">= 3.0.3"
 gem "therubyracer", :group => :assets, :platform => :ruby
 gem 'simple_form'
 gem 'awesome_print', :group => :development
+
+group :development do
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'shoulda-context'
+end

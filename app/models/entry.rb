@@ -6,5 +6,4 @@ class Entry < ActiveRecord::Base
   validates_presence_of :date_of_service
   validates_presence_of :duration_of_service
   validates_presence_of :group_size
-
 end
