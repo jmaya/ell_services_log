@@ -15,6 +15,5 @@ gem 'awesome_print', :group => :development
 
 group :development do
   gem 'rspec-rails'
-  gem 'shoulda'
-  gem 'shoulda-context'
+  gem "shoulda", :require => false
 end
