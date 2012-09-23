@@ -17,7 +17,7 @@
     <td><%= entry.group_size %></td>
     <td><%= link_to 'Show', entry %></td>
     <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-    <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to('Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }) if current_user.admin %></td>
   </tr>
 <% end %>
 </table>

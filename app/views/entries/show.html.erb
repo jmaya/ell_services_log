@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+
   <b>Date of service:</b>
   <%= @entry.date_of_service %>
 </p>
@@ -15,6 +16,11 @@
   <%= @entry.group_size %>
 </p>
 
+<ul>
+  <% @entry.tasks.each do |t| %>
+    <li><%=t.name %></li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>

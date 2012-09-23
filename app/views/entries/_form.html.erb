@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+  <%= hidden_field_tag "entry[user_id]", current_user.id%>
   <div class="field">
     <%= f.label :date_of_service %><br />
     <%= f.text_field :date_of_service, :class => 'datepicker' %>
@@ -29,7 +30,7 @@
   <% Category.all.each do |category| %>
     <h4><%=category.name %> </h4>
     <% category.tasks.each do |task| %>
-      <%= check_box_tag "entry[task_ids][]", task.id %><%=task.name %></br>
+      <%= check_box_tag "entry[task_ids][]", task.id  %><%=task.name %></br>
     <% end %>
   <% end %>
 
