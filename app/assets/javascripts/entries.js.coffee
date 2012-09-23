@@ -5,3 +5,9 @@
 $(document).ready ->
   $(".datepicker").datepicker
     dateFormat: 'D, dd M yy'
+
+  $('#select_all_tasks').click ->
+    $(':checkbox').prop("checked", true)
+  $('#un_select_all_tasks').click ->
+    $(':checkbox').prop("checked", false)
+

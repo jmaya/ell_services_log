@@ -27,6 +27,10 @@
   <h3>
     Areas Covered/Facilitated
   </h3>
+  <p>
+    <input type="button" value="Select All" id="select_all_tasks"/>
+    <input type="button" value="Unselect" id="un_select_all_tasks"/>
+  </p>
   <% Category.all.each do |category| %>
     <h4><%=category.name %> </h4>
     <% category.tasks.each do |task| %>
