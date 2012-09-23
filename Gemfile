@@ -17,3 +17,5 @@ group :development do
   gem 'rspec-rails'
   gem "shoulda", :require => false
 end
+
+gem 'devise'
