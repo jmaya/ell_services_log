@@ -34,7 +34,11 @@
   <% Category.all.each do |category| %>
     <h4><%=category.name %> </h4>
     <% category.tasks.each do |task| %>
+      <% if @entry.tasks.include? task %>
+        <%= check_box_tag "entry[task_ids][]", task.id,true  %><%=task.name %></br>
+      <% else %>
       <%= check_box_tag "entry[task_ids][]", task.id  %><%=task.name %></br>
+    <% end %>
     <% end %>
   <% end %>
 
