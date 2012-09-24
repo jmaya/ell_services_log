@@ -1,1 +1,5 @@
 <%= link_to "Ell Services Log", root_path, :class => 'brand' %>
+<% if user_signed_in? %>
+  <%= link_to "LogOut", destroy_user_session_path, :method => :delete, :class => 'brand' %>
+<% end %>
+
