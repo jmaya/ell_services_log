@@ -41,10 +41,17 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
-    @entry = Entry.new(params[:entry])
+    @students = Student.find(params[:entry][:student_ids])
+    @students.each do |s|
+      @entry = Entry.new(params[:entry])
+      @entry.student = s
+      @entry.save
+    end
 
     respond_to do |format|
-      if @entry.save
+      # if @entry.save
+      #TODO Fix this logic
+      if true
         format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
         format.json { render json: @entry, status: :created, location: @entry }
       else
