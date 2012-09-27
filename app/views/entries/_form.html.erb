@@ -11,6 +11,16 @@
     </div>
   <% end %>
 
+  <div id="students">
+    <h2>Entries for</h2>
+
+    <% @students.each do |s| %>
+      <p>
+      <%= check_box_tag "entry[student_ids][]", s.id, true %> <%=s.first_name%> <%=s.last_name%>
+      </p>
+    <% end %>
+  </div>
+
   <%= hidden_field_tag "entry[user_id]", current_user.id%>
   <div class="field">
     <%= f.label :date_of_service %><br />
@@ -28,8 +38,8 @@
     Areas Covered/Facilitated
   </h3>
   <p>
-    <input type="button" value="Select All" id="select_all_tasks"/>
-    <input type="button" value="Unselect" id="un_select_all_tasks"/>
+  <input type="button" value="Select All" id="select_all_tasks"/>
+  <input type="button" value="Unselect" id="un_select_all_tasks"/>
   </p>
   <% Category.all.each do |category| %>
     <h4><%=category.name %> </h4>
@@ -37,8 +47,8 @@
       <% if @entry.tasks.include? task %>
         <%= check_box_tag "entry[task_ids][]", task.id,true  %><%=task.name %></br>
       <% else %>
-      <%= check_box_tag "entry[task_ids][]", task.id  %><%=task.name %></br>
-    <% end %>
+        <%= check_box_tag "entry[task_ids][]", task.id  %><%=task.name %></br>
+      <% end %>
     <% end %>
   <% end %>
 

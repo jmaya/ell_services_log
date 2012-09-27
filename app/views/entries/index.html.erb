@@ -5,6 +5,7 @@
     <th>Date of service</th>
     <th>Duration of service</th>
     <th>Group size</th>
+    <th>Students</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= entry.date_of_service %></td>
     <td><%= entry.duration_of_service %></td>
     <td><%= entry.group_size %></td>
+    <td><%= entry.students.collect {|s| s.number}.join(",") %></td>
     <td><%= link_to 'Show', entry %></td>
     <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
     <td><%= link_to('Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }) if current_user.admin %></td>

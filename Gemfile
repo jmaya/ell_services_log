@@ -19,3 +19,4 @@ group :development do
 end
 
 gem 'devise'
+gem 'acts-as-taggable-on', '~> 2.3.1'

@@ -24,6 +24,7 @@ class EntriesController < ApplicationController
   # GET /entries/new
   # GET /entries/new.json
   def new
+    @students = Student.find(params[:students])
     @entry = Entry.new
 
     respond_to do |format|
@@ -79,5 +80,9 @@ class EntriesController < ApplicationController
       format.html { redirect_to entries_url }
       format.json { head :no_content }
     end
+  end
+
+  def student_wizzard
+    @tags = ActsAsTaggableOn::Tag.all
   end
 end
