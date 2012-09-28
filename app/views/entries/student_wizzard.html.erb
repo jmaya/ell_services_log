@@ -1,4 +1,4 @@
-<h1>Student Wizard</h1>
+<h1>Student Group Wizard</h1>
 <%= form_tag new_entry_path, :id => 'student-wizzard-form', :method => :get  do %>
   <% @tags.each do |t| %>
     <h3><%=t.name%></h3>
@@ -8,9 +8,11 @@
     <% Student.tagged_with(t).each do |s| %>
       <p>
       <%= check_box_tag 'students[]', s.id, false, :class => t.name.parameterize %>
-      <%=s.number %>
       <%=s.first_name%>
-      <%=s.last_name%>
+      <%=s.last_name%>,
+      <%=s.number %>,
+      <%=s.level %> Gr,
+      <%=s.language_level_code %>
       <p>
     <% end %>
   <% end %>

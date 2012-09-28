@@ -10,6 +10,9 @@
       </ul>
     </div>
   <% end %>
+  <p>
+    <%=ActsAsTaggableOn::Tag.all.collect(&:name).join(", ") %>
+  <p>
   <div class="field">
     <%= f.label :group_list, "Gorups (separated by commas)" %><br />
     <%= f.text_field :group_list %>
@@ -32,8 +35,10 @@
     <%= f.text_field :level %>
   </div>
   <div class="field">
-    <%= f.label :language_classification %><br />
-    <%= f.input :language_classification, :collection => ["A1","B1"] %>
+    <%= f.input :language_level_code, :collection => ["A1", "A2", "B1", "B2", "C1", "C2"] %>
+  </div>
+  <div class="field">
+    <%= f.input :language_classification, :collection => ["LF","LN","LP","LY","LZ","ZZ","TN"] %>
   </div>
   <div class="actions">
     <%= f.submit %>

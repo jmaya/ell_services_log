@@ -96,6 +96,6 @@ class EntriesController < ApplicationController
   end
 
   def student_wizzard
-    @tags = ActsAsTaggableOn::Tag.all
+    @tags = Student.group_counts
   end
 end
