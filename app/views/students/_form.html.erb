@@ -14,7 +14,7 @@
     <%=ActsAsTaggableOn::Tag.all.collect(&:name).join(", ") %>
   <p>
   <div class="field">
-    <%= f.label :group_list, "Gorups (separated by commas)" %><br />
+    <%= f.label :group_list, "Groups (separated by commas)" %><br />
     <%= f.text_field :group_list %>
   </div>
 
