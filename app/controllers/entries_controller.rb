@@ -41,10 +41,16 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
-    @students = Student.find(params[:entry][:student_ids])
+    @students = Student.find(params[:student_ids])
     @students.each do |s|
       @entry = Entry.new(params[:entry])
-      @entry.student = s
+      Task.find(params[:task_ids]).each do |task|
+        et = EntryTask.new
+        et.task = task
+        et.student = s
+        et.entry = @entry
+        et.save
+      end
       @entry.save
     end
 

@@ -16,7 +16,7 @@
 
     <% @students.each do |s| %>
       <p>
-      <%= check_box_tag "entry[student_ids][]", s.id, true %> <%=s.first_name%> <%=s.last_name%>
+      <%= check_box_tag "student_ids[]", s.id, true %> <%=s.first_name%> <%=s.last_name%>
       </p>
     <% end %>
   </div>
@@ -45,9 +45,9 @@
     <h4><%=category.name %> </h4>
     <% category.tasks.each do |task| %>
       <% if @entry.tasks.include? task %>
-        <%= check_box_tag "entry[task_ids][]", task.id,true  %><%=task.name %></br>
+        <%= check_box_tag "task_ids[]", task.id,true  %><%=task.name %></br>
       <% else %>
-        <%= check_box_tag "entry[task_ids][]", task.id  %><%=task.name %></br>
+        <%= check_box_tag "task_ids[]", task.id  %><%=task.name %></br>
       <% end %>
     <% end %>
   <% end %>
