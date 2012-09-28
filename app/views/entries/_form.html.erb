@@ -41,7 +41,7 @@
   <input type="button" value="Select All" id="select_all_tasks"/>
   <input type="button" value="Unselect" id="un_select_all_tasks"/>
   </p>
-  <% Category.all.each do |category| %>
+  <% Category.order(:order_number).all.each do |category| %>
     <h4><%=category.name %> </h4>
     <% category.tasks.each do |task| %>
       <% if @entry.tasks.include? task %>
