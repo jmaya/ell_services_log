@@ -1,10 +1,13 @@
 <h1>Student Wizard</h1>
-<%= form_tag new_entry_path, :method => :get  do %>
+<%= form_tag new_entry_path, :id => 'student-wizzard-form', :method => :get  do %>
   <% @tags.each do |t| %>
     <h3><%=t.name%></h3>
+    <input type="button" value="Select All" id="<%="#{t.name.parameterize}-select"%>"/>
+    <input type="button" value="Unselect" id="<%="#{t.name.parameterize}-unselect"%>"/>
+
     <% Student.tagged_with(t).each do |s| %>
       <p>
-      <%= check_box_tag 'students[]', s.id %>
+      <%= check_box_tag 'students[]', s.id, false, :class => t.name.parameterize %>
       <%=s.number %>
       <%=s.first_name%>
       <%=s.last_name%>

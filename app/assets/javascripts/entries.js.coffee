@@ -10,3 +10,4 @@ $(document).ready ->
     $('.task_checkboxes').prop("checked", true)
   $('#un_select_all_tasks').click ->
     $('.task_checkboxes').prop("checked", false)
+
