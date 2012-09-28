@@ -20,3 +20,5 @@ end
 gem 'devise'
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'rails_admin'
+gem 'unicorn'
+gem 'foreman'
