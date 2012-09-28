@@ -45,9 +45,9 @@
     <h4><%=category.name %> </h4>
     <% category.tasks.each do |task| %>
       <% if @entry.tasks.include? task %>
-        <%= check_box_tag "task_ids[]", task.id,true  %><%=task.name %></br>
+        <%= check_box_tag "task_ids[]", task.id,true, {:class => 'task_checkboxes' } %><%=task.name %></br>
       <% else %>
-        <%= check_box_tag "task_ids[]", task.id  %><%=task.name %></br>
+        <%= check_box_tag "task_ids[]", task.id,false, {:class => 'task_checkboxes' } %><%=task.name %></br>
       <% end %>
     <% end %>
   <% end %>
