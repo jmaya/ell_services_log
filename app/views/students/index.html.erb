@@ -8,6 +8,7 @@
     <th>Last name</th>
     <th>Level</th>
     <th>Language classification</th>
+    <th>Language Level Code</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,6 +22,7 @@
     <td><%= student.last_name %></td>
     <td><%= student.level %></td>
     <td><%= student.language_classification %></td>
+    <td><%= student.language_level_code %></td>
     <td><%= link_to 'Show', student %></td>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
