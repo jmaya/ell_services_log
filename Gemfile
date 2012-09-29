@@ -15,6 +15,7 @@ gem 'awesome_print', :group => :development
 group :development do
   gem 'rspec-rails'
   gem "shoulda", :require => false
+  gem 'factory_girl'
 end
 
 gem 'devise'
