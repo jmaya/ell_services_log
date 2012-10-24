@@ -1,5 +1,3 @@
-require 'factory_girl'
-
 FactoryGirl.define do
   factory :student do
     sequence(:first_name) {|n| "FirstName#{n}"}

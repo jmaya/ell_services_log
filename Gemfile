@@ -26,7 +26,7 @@ gem 'foreman'
 
 gem "guard-rspec", :group => :development
 gem "guard-bundler", :group => :development
-gem "guard-cucumber", :group => :development
+# gem "guard-cucumber", :group => :development
 gem "guard-spork", :group => :development
 gem "spork", :group => [:test,:development]
 gem 'rb-fsevent', '~> 0.9.1', :group => [:test,:development]
