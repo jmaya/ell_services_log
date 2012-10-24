@@ -10,4 +10,10 @@ FactoryGirl.define do
     sequence(:sex) {|n| "M"}
     sequence(:birthdate) {|n| Time.now }
   end
+
+  factory :user do
+    sequence(:email) { |s| "email#{s}@test.com" }
+    password { "Password1" }
+    password_confirmation { "Password1" }
+  end
 end
