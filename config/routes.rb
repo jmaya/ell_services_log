@@ -1,5 +1,12 @@
 EllServicesLog::Application.routes.draw do
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  resources :reports do |reports|
+    member do
+      get "download"
+    end
+  end
 
   resources :students
 
