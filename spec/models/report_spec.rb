@@ -10,6 +10,6 @@ describe Report do
     student = FactoryGirl.create(:student)
     report = Report.new(:name => "Student", :sql => "SELECT * FROM students")
     d = report.run
-    d.to_csv.should eq("xx")
+    d.should match(/LastName1,1,1,2012-10-30/)
   end
 end
