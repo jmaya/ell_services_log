@@ -18,4 +18,8 @@ class Report < ActiveRecord::Base
     end
     csv
   end
+
+  def file_name
+    "#{self.name.underscore.gsub(/\s/,"_")}.csv"
+  end
 end
