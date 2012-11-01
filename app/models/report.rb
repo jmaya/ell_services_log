@@ -8,11 +8,11 @@ class Report < ActiveRecord::Base
   validates_uniqueness_of :name
   validates_uniqueness_of :sql
 
-  before_save :generate_checksum
+  before_save :save_generated_checksum
 
 
   def run
-    new_checksum = Digest::SHA1.hexdigest sql
+    new_checksum = generate_checksum(sql)
     raise "SQL Tampered" unless @checksum == new_checksum
     headers = false
     csv = ''
@@ -31,7 +31,12 @@ class Report < ActiveRecord::Base
   end
 
   private
-  def generate_checksum
-    @checksum = Digest::SHA1.hexdigest sql
+
+  def save_generated_checksum
+    @checksum = generate_checksum(sql)
+  end
+
+  def generate_checksum(data)
+    Digest::SHA1.hexdigest(data)
   end
 end
