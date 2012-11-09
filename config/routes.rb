@@ -1,5 +1,9 @@
 EllServicesLog::Application.routes.draw do
 
+  get "assessments/new"
+
+  get "assessments/create"
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   resources :reports do |reports|
@@ -8,7 +12,10 @@ EllServicesLog::Application.routes.draw do
     end
   end
 
-  resources :students
+
+  resources :students do |student|
+    resources :assessments
+  end
 
   devise_for :users
 

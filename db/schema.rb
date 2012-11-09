@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121108190255) do
+ActiveRecord::Schema.define(:version => 20121109133808) do
+
+  create_table "assessments", :force => true do |t|
+    t.string   "name"
+    t.string   "grade"
+    t.integer  "student_id"
+    t.date     "assessed_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "assessments", ["student_id"], :name => "index_assessments_on_student_id"
 
   create_table "categories", :force => true do |t|
     t.string   "name"

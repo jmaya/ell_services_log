@@ -1,0 +1,26 @@
+<%= simple_form_for([@student,@assessment]) do |f| %>
+  <% if @assessment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assessment.errors.count, "error") %> prohibited this entry from being saved:</h2>
+      <ul>
+      <% @assessment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.input :name %>
+  </div>
+  <div class="field">
+    <%= f.input :grade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :assessed_at %><br />
+    <%= f.text_field :assessed_at, :class => 'datepicker' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Student do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_many :assesments }
+  it { should validate_presence_of :first_name }
+  it { should validate_presence_of :last_name }
+  it { should validate_presence_of :number }
 end
