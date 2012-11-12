@@ -29,7 +29,7 @@
  <%= link_to "Add Assesment", new_student_assessment_path(@student) %>
 <ul>
   <% for assessment in @student.assessments.order("assessed_at DESC") %>
-    <li><%= assessment.name %> Grade: <%= assessment.grade %> on <%= assessment.assessed_at.to_s(:medium) %></li>
+    <li><%= show_assessment(@student,assessment) %></li>
   <% end %>
 </ul>
 

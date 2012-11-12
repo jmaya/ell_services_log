@@ -23,12 +23,12 @@ describe AssessmentsController do
     it "returns http success" do
       valid_attribs = {
         "assessment"=>
-          {
-            "name"=>"test",
-            "grade"=>"b+",
-            "assessed_at"=>"Fri, 09 Nov 2012"
-          },
-          "student_id"=>@student_id
+        {
+          "name"=>"test",
+          "grade"=>"b+",
+          "assessed_at"=>"Fri, 09 Nov 2012"
+        },
+        "student_id"=>@student_id
       }
       get 'create', valid_attribs
       response.code.should == "302"
@@ -38,13 +38,14 @@ describe AssessmentsController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates" do
-      put :update, {
-        :student_id => @student_id,
-        :assessment => {
-          name:'The new name'
+        put :update, {
+          :student_id => @student_id,
+          :assessment => {
+            name:'The new name'
+          }
         }
-      }
-      response.code.should == "302"
+        response.code.should == "302"
+      end
     end
   end
 end
