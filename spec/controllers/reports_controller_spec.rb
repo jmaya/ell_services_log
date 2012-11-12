@@ -14,11 +14,4 @@ describe ReportsController do
       response.should be_success
     end
   end
-
-  describe "GET 'show'" do
-    xit "returns http success" do
-      get 'show'
-      response.should be_success
-    end
-  end
 end

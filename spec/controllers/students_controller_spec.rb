@@ -3,10 +3,6 @@ require 'spec_helper'
 describe StudentsController do
   include Devise::TestHelpers
 
-  # This should return the minimal set of attributes required to create a valid
-  # Book. As you add validations to Book, be sure to
-  # update the return value of this method accordingly.
-  #
 
   before (:each) do
     @user = FactoryGirl.create(:user)

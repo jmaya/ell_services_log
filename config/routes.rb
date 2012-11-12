@@ -1,8 +1,7 @@
 EllServicesLog::Application.routes.draw do
 
-  get "assessments/new"
+  match "/assessments" => 'assessments#search'
 
-  get "assessments/create"
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 

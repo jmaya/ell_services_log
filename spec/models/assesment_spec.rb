@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Assesment do
+describe Assessment do
   it { should belong_to :student}
 end

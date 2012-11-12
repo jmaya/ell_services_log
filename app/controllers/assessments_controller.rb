@@ -1,5 +1,12 @@
 class AssessmentsController < ApplicationController
   before_filter :get_student
+
+  def search
+    @assessments = Assessment.where("name like ? ", "%#{params[:term].upcase}%").collect {|c| c.name }.uniq
+    respond_to do |format|
+      format.json { render json: @assessments}
+    end
+  end
   def new
     @assessment = @student.assessments.build
   end
@@ -14,6 +21,10 @@ class AssessmentsController < ApplicationController
   end
 
   def get_student
+    begin
     @student ||= Student.find params[:student_id]
+    rescue
+      Student.new
+    end
   end
 end
