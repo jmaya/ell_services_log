@@ -11,7 +11,7 @@ describe Report do
     report = Report.new(:name => "Student", :sql => "SELECT * FROM students")
     report.save
     d = report.run
-    d.should match(/LastName1/)
+    d.should match(/LastName/)
   end
 
   it "should generate a name" do

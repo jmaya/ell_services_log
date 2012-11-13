@@ -6,8 +6,8 @@ describe AssessmentsController do
 
   before (:each) do
     @user = FactoryGirl.create(:user)
-    @studdent = FactoryGirl.create(:student)
-    @student_id = @studdent.id
+    @student = FactoryGirl.create(:student)
+    @student_id = @student.id
     sign_in @user
   end
 
@@ -32,13 +32,15 @@ describe AssessmentsController do
       }
       get 'create', valid_attribs
       response.code.should == "302"
-      @studdent.assessments.count.should == 1
+      @student.assessments.count.should == 1
     end
   end
   describe "PUT update" do
     describe "with valid params" do
       it "updates" do
+        assessment = @student.assessments.create(:name => 'Test', :grade => 'A+', :assessed_at => Time.now)
         put :update, {
+          :id => assessment.to_param,
           :student_id => @student_id,
           :assessment => {
             name:'The new name'
