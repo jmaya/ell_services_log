@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-EllServicesLog::Application.config.secret_token = 'c93899b07542332fc3e0db3efcf673450fcea99429ff7120e726f7e2e8822aa63bffbdc48a2c83b86589022fed52f71d72b4fef36f532a88216905386b7e5b16'
+EllServicesLog::Application.config.secret_token = '3fa7765f687e6c2abc7721c27202584bc616125c24c2ab6fd7fc7b01f5f59942eddaad4a5e7dcda17da44353fc3219b79d0d64f1d91a4011b259aacad9d5c49d'
