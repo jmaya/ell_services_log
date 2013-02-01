@@ -1,5 +1,11 @@
 <h1>Listing students</h1>
 
+<div class='apple_pagination'>
+  <div class="page_info">
+  </div>
+  <%= will_paginate @students, container:false %>
+</div>
+
 <table>
   <tr>
     <th>Group</th>
@@ -15,8 +21,8 @@
     <th></th>
   </tr>
 
-<% @students.each do |student| %>
-  <tr>
+  <% @students.each do |student| %>
+    <tr>
     <td><%= student.group_list%></td>
     <td><%= student.number %></td>
     <td><%= student.first_name %></td>
@@ -32,6 +38,13 @@
 <% end %>
 </table>
 
+<div class='apple_pagination'>
+  <div class="page_info">
+  </div>
+  <%= will_paginate @students, container:false %>
+</div>
+
 <br />
+
 
 <%= link_to 'New Student', new_student_path %>

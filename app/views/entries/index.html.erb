@@ -1,5 +1,11 @@
 <h1>Listing entries</h1>
 
+<div class='apple_pagination'>
+  <div class="page_info">
+  </div>
+  <%= will_paginate @entries, container:false %>
+</div>
+
 <table>
   <tr>
     <th>Date of service</th>
@@ -11,18 +17,24 @@
     <th></th>
   </tr>
 
-<% @entries.each do |entry| %>
-  <tr>
+  <% @entries.each do |entry| %>
+    <tr>
     <td><%= entry.date_of_service %></td>
     <td><%= entry.duration_of_service %></td>
     <td><%= entry.group_size %></td>
-    <td><%= entry.students.collect {|s| s.number}.join(",") %></td>
+    <td><%= entry.students.count %> Students</td>
     <td><%= link_to 'Show', entry %></td>
     <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
     <td><%= link_to('Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }) if current_user.admin %></td>
   </tr>
 <% end %>
 </table>
+
+<div class='apple_pagination'>
+  <div class="page_info">
+  </div>
+  <%= will_paginate @entries, container:false %>
+</div>
 
 <br />
 
