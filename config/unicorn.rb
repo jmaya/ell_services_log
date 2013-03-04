@@ -1,6 +1,7 @@
 worker_processes 2
 timeout 30
 preload_app true
+working_directory "/u/apps/ell/current"
 
 before_fork do |server, worker|
   # Replace with MongoDB or whatever
