@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121109133808) do
+ActiveRecord::Schema.define(:version => 20130313230943) do
 
   create_table "assessments", :force => true do |t|
     t.string   "name"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20121109133808) do
     t.integer  "item"
     t.string   "table"
     t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 8
+    t.integer  "year",       :limit => 5
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
   end
@@ -74,11 +74,12 @@ ActiveRecord::Schema.define(:version => 20121109133808) do
     t.string   "last_name"
     t.string   "level"
     t.string   "language_classification"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.string   "sex"
     t.date     "birthdate"
     t.string   "language_level_code"
+    t.boolean  "enrolment_status",        :default => true
   end
 
   create_table "taggings", :force => true do |t|

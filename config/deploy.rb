@@ -74,7 +74,7 @@ namespace :deploy do
   end
 end
 
-# after "deploy:symlink", "custom:symlink_unicorn_init"
-after "deploy:symlink", "custom:symlink_items"
-after "deploy:create_symlink", "custom:pipeline_precompile"
 after "deploy:update_code", "custom:symlink_db"
+# after "deploy:symlink", "custom:symlink_unicorn_init"
+# after "deploy:symlink", "custom:symlink_items"
+# after "deploy:create_symlink", "custom:pipeline_precompile"
