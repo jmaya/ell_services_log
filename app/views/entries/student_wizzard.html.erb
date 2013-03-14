@@ -5,7 +5,7 @@
     <input type="button" value="Select All" id="<%="#{t.name.parameterize}-select"%>"/>
     <input type="button" value="Unselect" id="<%="#{t.name.parameterize}-unselect"%>"/>
 
-    <% Student.tagged_with(t).each do |s| %>
+    <% Student.tagged_with(t).where(enrolment_status:true).each do |s| %>
       <p>
       <%= check_box_tag 'students[]', s.id, false, :class => t.name.parameterize %>
       <%=s.first_name%>

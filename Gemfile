@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 gem "rails", "~> 3.2.12"
 gem 'pg'
-gem 'sqlite3'
 gem 'will_paginate'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -27,6 +26,7 @@ gem 'unicorn'
 gem 'foreman'
 
 gem "guard-rspec", :group => :development
+gem "wirble", :group => :development
 gem "guard-bundler", :group => :development
 # gem "guard-cucumber", :group => :development
 gem "guard-spork", :group => :development
