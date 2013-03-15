@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem "rails", "~> 3.2.12"
+gem "rails", "~> 3.2.11"
 gem 'pg'
 gem 'will_paginate'
 group :assets do
@@ -21,12 +21,11 @@ end
 
 gem 'devise'
 gem 'acts-as-taggable-on', '~> 2.3.1'
-gem "rails_admin", "~> 0.4.5"
+gem 'rails_admin'
 gem 'unicorn'
 gem 'foreman'
 
 gem "guard-rspec", :group => :development
-gem "wirble", :group => :development
 gem "guard-bundler", :group => :development
 # gem "guard-cucumber", :group => :development
 gem "guard-spork", :group => :development
