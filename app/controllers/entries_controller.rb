@@ -97,5 +97,6 @@ class EntriesController < ApplicationController
 
   def student_wizzard
     @tags = Student.group_counts
+    redirect_to new_student_path, notice:'Please create a new Student before you continue.'
   end
 end

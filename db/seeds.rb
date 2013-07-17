@@ -22,3 +22,5 @@ YAML.load_file(Rails.root + "db/tasks.yaml").each do |c|
   attr.delete("updated_at")
   Task.create!(attr)
 end
+
+User.create!(email:'jcmaya@hotmail.com', password:'Password1', password_confirmation:'Password1')
